@@ -85,9 +85,17 @@ Channelsmith takes a topic and makes a 10–20 minute documentary or explainer e
 | Footage | Pexels, Pixabay, Wikimedia Commons |
 | Deploy | Docker or Ubuntu VPS |
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-A real excerpt is in [`snippets/clean-dossier.ts`](snippets/clean-dossier.ts): the function that removes every source Claude did not actually retrieve, renumbers the rest and moves unsupported facts into the list of gaps. This is why a Channelsmith script cannot cite a page nobody read.
+Real excerpts from the source, shown for illustration:
+
+- **Research dossier cleanup** ([`snippets/clean-dossier.ts`](snippets/clean-dossier.ts)): Removes every source Claude did not actually retrieve, renumbers the rest and moves unsupported facts into the list of gaps, so a script cannot cite a page nobody read.
+- **Validated AI answers with targeted repair** ([`snippets/validated-answer.ts`](snippets/validated-answer.ts)): Every AI step is parsed, checked against a schema and its own rules, and sent back with the exact list of problems for at most two repairs, so a bad scene is caught before an hour-long render.
+- **Footage download allowlist and rate-limit back-off** ([`snippets/footage-network-rules.ts`](snippets/footage-network-rules.ts)): Footage is fetched only from each provider's media hosts over https on port 443 with no credentials, and a host that answers HTTP 429 is left alone for as long as it asks.
 
 ## Requirements (full version)
 
