@@ -10,6 +10,8 @@
   A person approves every upload.
 </p>
 
+<p align="center"><sub>AI YouTube video generator source code · documentary & explainer videos · research with sources · white-label</sub></p>
+
 <p align="center">
   <a href="https://channelsmith-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://channelsmith.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -105,6 +107,20 @@ Real excerpts from the source, shown for illustration:
 - For public YouTube uploads: a Google Cloud project with the YouTube API (Google keeps uploads private until it audits your project)
 
 Not included: hosting, API usage costs, any audience or revenue. No text-to-video model, no AI avatars and no reuse of other creators' videos.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete Channelsmith source code is sold at [store.mikodes.com/p/channelsmith](https://store.mikodes.com/p/channelsmith/).
+
+**What is Channelsmith built with?**  
+Node.js 22, TypeScript, Hono, React 19, SQLite, Claude, ElevenLabs, Chrome frame renderer and ffmpeg.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://channelsmith-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
